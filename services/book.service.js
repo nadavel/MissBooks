@@ -60,12 +60,6 @@ function getDefaultFilter(filterBy = { txt: '', minSpeed: 0 }) {
 function _createBooks() {
     let loadedBooks = utilService.loadFromStorage(DB_KEY)
     if (!loadedBooks || !loadedBooks.length) {
-        //books = []
-        // const vendors = ['audu', 'fiak', 'subali', 'mitsu']
-        // for (let i = 0; i < 6; i++) {
-        //     const vendor = vendors[utilService.getRandomIntInclusive(0, vendors.length - 1)]
-        //     books.push(_createBook(vendor, utilService.getRandomIntInclusive(80, 300)))
-        // }
         utilService.saveToStorage(DB_KEY, books)
     }
 }
