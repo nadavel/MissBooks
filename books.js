@@ -1,21 +1,21 @@
 
 
-const books = [
+export const books = [
   {
     "id": "OXeMG8wNskc",
-    "title": "metus hendrerit",
+    "title": "Akarnae",
     "subtitle": "mi est eros convallis auctor arcu dapibus himenaeos",
     "authors": [
-      "Barbara Cartland"
+      "Lynette Noni"
     ],
-    "publishedDate": 1999,
+    "publishedDate": 2015,
     "description": "placerat nisi sodales suscipit tellus tincidunt mauris elit sit luctus interdum ad dictum platea vehicula conubia fermentum habitasse congue suspendisse",
     "pageCount": 713,
     "categories": [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/20.jpg",
+    "thumbnail": "BooksImages\\20.jpg",
     "language": "en",
     "listPrice": {
       "amount": 109,
@@ -25,19 +25,19 @@ const books = [
   },
   {
     "id": "JYOJa2NpSCq",
-    "title": "morbi",
+    "title": "You can't be an astronaut",
     "subtitle": "lorem euismod dictumst inceptos mi",
     "authors": [
-      "Barbara Cartland"
+      "Joseph Smets"
     ],
-    "publishedDate": 1978,
+    "publishedDate": 1999,
     "description": "aliquam pretium lorem laoreet etiam odio cubilia iaculis placerat aliquam tempor nisl auctor",
     "pageCount": 129,
     "categories": [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/14.jpg",
+    "thumbnail": "BooksImages\\14.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 44,
@@ -47,10 +47,10 @@ const books = [
   },
   {
     "id": "1y0Oqts35DQ",
-    "title": "at viverra venenatis",
+    "title": "Between here and gone",
     "subtitle": "gravida libero facilisis rhoncus urna etiam",
     "authors": [
-      "Dr. Seuss"
+      "Barbara Ferrer"
     ],
     "publishedDate": 1999,
     "description": "lorem molestie ut euismod ad quis mi ultricies nisl cursus suspendisse dui tempor sit suscipit metus etiam euismod tortor sagittis habitant",
@@ -59,7 +59,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/2.jpg",
+    "thumbnail": "BooksImages\\2.jpg",
     "language": "he",
     "listPrice": {
       "amount": 108,
@@ -69,10 +69,10 @@ const books = [
   },
   {
     "id": "kSnfIJyikTP",
-    "title": "dictum",
+    "title": "Beat your way to the top",
     "subtitle": "augue eu consectetur class curabitur conubia ligula in ullamcorper",
     "authors": [
-      "Danielle Steel"
+      "Dr. Stephen Larkin"
     ],
     "publishedDate": 1978,
     "description": "interdum inceptos mauris habitant primis neque tempus lacus morbi auctor cras consectetur euismod vehicula neque netus enim vivamus augue molestie imperdiet tincidunt aliquam",
@@ -81,7 +81,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/16.jpg",
+    "thumbnail": "BooksImages\\16.jpg",
     "language": "en",
     "listPrice": {
       "amount": 30,
@@ -91,10 +91,10 @@ const books = [
   },
   {
     "id": "f4iuVmbuKCC",
-    "title": "sem himenaeos aptent",
+    "title": "Schisms",
     "subtitle": "interdum per habitasse luctus purus est",
     "authors": [
-      "Dr. Seuss"
+      "V.A. Jeffrey"
     ],
     "publishedDate": 2011,
     "description": "et vehicula faucibus amet accumsan lectus cras nulla cubilia arcu neque litora mi habitasse quis amet augue facilisis sed",
@@ -103,7 +103,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/12.jpg",
+    "thumbnail": "BooksImages\\12.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 19,
@@ -113,7 +113,7 @@ const books = [
   },
   {
     "id": "U2rfZO6oBZf",
-    "title": "mi ante posuere",
+    "title": "Gwent",
     "subtitle": "sapien curae consectetur ultrices fringilla blandit ipsum curae faucibus",
     "authors": [
       "Leo Tolstoy"
@@ -125,7 +125,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/1.jpg",
+    "thumbnail": "BooksImages\\1.jpg",
     "language": "en",
     "listPrice": {
       "amount": 91,
@@ -135,19 +135,19 @@ const books = [
   },
   {
     "id": "xI0wrXaaAcq",
-    "title": "non",
+    "title": "Old Tractors and the Men Who Love Them",
     "subtitle": "leo tortor per dapibus mattis ut conubia porttitor ligula viverra",
     "authors": [
-      "Leo Tolstoy"
+      "Roger Welsch"
     ],
-    "publishedDate": 2011,
+    "publishedDate": 1995,
     "description": "nec scelerisque id cursus platea sit ullamcorper bibendum ultrices tempus ante mi aliquet cras tortor dapibus dictum scelerisque",
     "pageCount": 65,
     "categories": [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/14.jpg",
+    "thumbnail": "BooksImages\\15.jpg",
     "language": "he",
     "listPrice": {
       "amount": 90,
@@ -157,10 +157,10 @@ const books = [
   },
   {
     "id": "9laHCEdSpFy",
-    "title": "tristique",
+    "title": "Holes",
     "subtitle": "consectetur a eu tincidunt condimentum amet nisi",
     "authors": [
-      "Dr. Seuss"
+      "Luis Sachar"
     ],
     "publishedDate": 1999,
     "description": "magna quisque venenatis laoreet purus in semper habitant proin pellentesque sed egestas cursus faucibus nam enim id sit mi ligula risus curabitur senectus curabitur sodales fames sem",
@@ -169,7 +169,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/11.jpg",
+    "thumbnail": "BooksImages\\11.jpg",
     "language": "he",
     "listPrice": {
       "amount": 176,
@@ -179,10 +179,10 @@ const books = [
   },
   {
     "id": "nGhVwZvGCGp",
-    "title": "urna ornare gravida",
+    "title": "The rise of the Russian empire",
     "subtitle": "sem vestibulum semper convallis pharetra tempor himenaeos ut",
     "authors": [
-      "Jin Yong"
+      "Hector H. Munro"
     ],
     "publishedDate": 2011,
     "description": "porttitor nisl sodales id eu tellus venenatis laoreet auctor dictumst nulla",
@@ -191,7 +191,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/10.jpg",
+    "thumbnail": "BooksImages\\10.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 116,
@@ -201,10 +201,11 @@ const books = [
   },
   {
     "id": "Q8Q9Lsd03BD",
-    "title": "consequat neque volutpat",
+    "title": "Unbored",
     "subtitle": "vel quis taciti fermentum feugiat ullamcorper curae praesent",
     "authors": [
-      "Dr. Seuss"
+      "Joshua Glenn",
+      "Elizabeth Larsen"
     ],
     "publishedDate": 1978,
     "description": "curabitur bibendum in dolor neque magna phasellus arcu nulla cubilia senectus maecenas ullamcorper neque accumsan facilisis dictumst ornare",
@@ -213,7 +214,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/5.jpg",
+    "thumbnail": "BooksImages\\5.jpg",
     "language": "en",
     "listPrice": {
       "amount": 145,
@@ -223,10 +224,10 @@ const books = [
   },
   {
     "id": "bd7a76kARao",
-    "title": "risus",
+    "title": "How to defend yourself against ALIEN abduction",
     "subtitle": "pretium bibendum pharetra curabitur quisque dictumst",
     "authors": [
-      "Danielle Steel"
+      "Ann Druffel"
     ],
     "publishedDate": 2018,
     "description": "auctor amet nostra luctus molestie proin platea cubilia netus sed purus egestas a primis eu tristique interdum litora lorem venenatis mattis senectus",
@@ -235,7 +236,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/16.jpg",
+    "thumbnail": "BooksImages\\18.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 157,
@@ -245,7 +246,7 @@ const books = [
   },
   {
     "id": "qKyG0vqeO3e",
-    "title": "interdum etiam vulputate",
+    "title": "Don't panic",
     "subtitle": "velit sapien eget tincidunt nunc tortor",
     "authors": [
       "Danielle Steel"
@@ -257,7 +258,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/17.jpg",
+    "thumbnail": "BooksImages\\17.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 57,
@@ -267,10 +268,10 @@ const books = [
   },
   {
     "id": "2RvT48ZNInj",
-    "title": "sagittis justo",
+    "title": "The ode less travelled",
     "subtitle": "etiam primis proin praesent placerat nisi fermentum nisi",
     "authors": [
-      "Agatha Christie"
+      "Stephen Fry"
     ],
     "publishedDate": 2011,
     "description": "nec faucibus arcu suspendisse tempus potenti lobortis aliquam quisque augue integer consectetur etiam ultrices curabitur tristique metus",
@@ -279,7 +280,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/8.jpg",
+    "thumbnail": "BooksImages\\8.jpg",
     "language": "en",
     "listPrice": {
       "amount": 167,
@@ -289,10 +290,10 @@ const books = [
   },
   {
     "id": "5z2s9pDXAYj",
-    "title": "quam ullamcorper himenaeos",
+    "title": "Magic lantern",
     "subtitle": "ut placerat eu dapibus sapien sodales laoreet",
     "authors": [
-      "Danielle Steel"
+      "Des Sheridan"
     ],
     "publishedDate": 1999,
     "description": "etiam nec aliquam euismod platea vel laoreet quisque condimentum sapien neque ut aliquam torquent in nam",
@@ -301,7 +302,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/3.jpg",
+    "thumbnail": "BooksImages\\3.jpg",
     "language": "he",
     "listPrice": {
       "amount": 150,
@@ -311,7 +312,7 @@ const books = [
   },
   {
     "id": "zBZu5cDEWha",
-    "title": "quis",
+    "title": "Book Title",
     "subtitle": "suscipit turpis etiam turpis libero lobortis",
     "authors": [
       "Jin Yong"
@@ -323,7 +324,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/6.jpg",
+    "thumbnail": "BooksImages\\6.jpg",
     "language": "en",
     "listPrice": {
       "amount": 58,
@@ -333,10 +334,10 @@ const books = [
   },
   {
     "id": "aOI7tQuPZ2f",
-    "title": "aliquam aliquet dapibus",
+    "title": "The Sith empire will rise again",
     "subtitle": "neque eu purus euismod placerat adipiscing odio egestas consequat",
     "authors": [
-      "Leo Tolstoy"
+      "Exar Kun"
     ],
     "publishedDate": 2011,
     "description": "dolor morbi malesuada eleifend purus taciti sit interdum aliquet commodo ut libero tincidunt",
@@ -345,7 +346,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/7.jpg",
+    "thumbnail": "BooksImages\\7.jpg",
     "language": "en",
     "listPrice": {
       "amount": 78,
@@ -355,10 +356,10 @@ const books = [
   },
   {
     "id": "WBooB82Uvwu",
-    "title": "class",
+    "title": "How to start your own country",
     "subtitle": "elit enim ultricies amet imperdiet a molestie class elementum venenatis",
     "authors": [
-      "Danielle Steel"
+      "Prince Roy"
     ],
     "publishedDate": 1999,
     "description": "rhoncus odio netus consectetur aenean hendrerit massa scelerisque elementum aptent lobortis pharetra maecenas quam nulla volutpat turpis non habitasse aenean ante sodales lobortis quisque libero imperdiet gravida eleifend nulla",
@@ -367,7 +368,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/10.jpg",
+    "thumbnail": "BooksImages\\19.jpg",
     "language": "en",
     "listPrice": {
       "amount": 118,
@@ -377,10 +378,10 @@ const books = [
   },
   {
     "id": "xm1z5bbZjlS",
-    "title": "vitae",
+    "title": "Fantasy Magazine",
     "subtitle": "class habitant at commodo semper ligula a bibendum",
     "authors": [
-      "Leo Tolstoy"
+      "A. Merritt"
     ],
     "publishedDate": 1999,
     "description": "himenaeos quis iaculis orci libero egestas quam varius primis erat lacus facilisis blandit dictum tristique interdum litora quisque purus senectus pretium purus",
@@ -389,7 +390,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/12.jpg",
+    "thumbnail": "BooksImages\\13.jpg",
     "language": "he",
     "listPrice": {
       "amount": 60,
@@ -399,10 +400,10 @@ const books = [
   },
   {
     "id": "u3j6QIKLlJb",
-    "title": "rhoncus vivamus",
+    "title": "It's just a dog",
     "subtitle": "nullam class risus amet senectus scelerisque etiam curabitur",
     "authors": [
-      "Agatha Christie"
+      "Russ Ryan"
     ],
     "publishedDate": 1978,
     "description": "torquent in et id lacus vivamus aptent cursus erat integer venenatis risus ac ante quam etiam euismod feugiat risus suscipit rhoncus pharetra quisque felis",
@@ -411,7 +412,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/20.jpg",
+    "thumbnail": "BooksImages\\4.jpg",
     "language": "he",
     "listPrice": {
       "amount": 110,
@@ -421,10 +422,10 @@ const books = [
   },
   {
     "id": "vxYYYdVlEH3",
-    "title": "donec mi ullamcorper",
+    "title": "The unsung hero",
     "subtitle": "varius malesuada augue molestie sollicitudin faucibus mi eu tempus",
     "authors": [
-      "William Shakespeare"
+      "Samantha James"
     ],
     "publishedDate": 2011,
     "description": "aliquet euismod mi vivamus bibendum donec etiam quisque iaculis ullamcorper est sed",
@@ -433,7 +434,7 @@ const books = [
       "Computers",
       "Hack"
     ],
-    "thumbnail": "http://coding-academy.org/books-photos/2.jpg",
+    "thumbnail": "BooksImages\\9.jpg",
     "language": "sp",
     "listPrice": {
       "amount": 186,

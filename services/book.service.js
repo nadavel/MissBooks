@@ -1,5 +1,6 @@
 import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
+import { books } from '../books.js'
 
 const DB_KEY = 'bookDB'
 _createBooks()
@@ -57,14 +58,14 @@ function getDefaultFilter(filterBy = { txt: '', minSpeed: 0 }) {
 }
 
 function _createBooks() {
-    let books = utilService.loadFromStorage(DB_KEY)
-    if (!books || !books.length) {
-        books = []
-        const vendors = ['audu', 'fiak', 'subali', 'mitsu']
-        for (let i = 0; i < 6; i++) {
-            const vendor = vendors[utilService.getRandomIntInclusive(0, vendors.length - 1)]
-            books.push(_createBook(vendor, utilService.getRandomIntInclusive(80, 300)))
-        }
+    let loadedBooks = utilService.loadFromStorage(DB_KEY)
+    if (!loadedBooks || !loadedBooks.length) {
+        //books = []
+        // const vendors = ['audu', 'fiak', 'subali', 'mitsu']
+        // for (let i = 0; i < 6; i++) {
+        //     const vendor = vendors[utilService.getRandomIntInclusive(0, vendors.length - 1)]
+        //     books.push(_createBook(vendor, utilService.getRandomIntInclusive(80, 300)))
+        // }
         utilService.saveToStorage(DB_KEY, books)
     }
 }
