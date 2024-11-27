@@ -34,7 +34,6 @@ export function BookFilter({ defaultFilter, onSetFilter }) {
     }
 
     function updateYearRange(){
-        debugger
         bookService.query()
             .then((books) => {
                 var years = books.map(book => book.publishedDate)

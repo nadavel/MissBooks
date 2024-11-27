@@ -41,8 +41,8 @@ export function BookIndex(){
     return (
         <section className="book-index">
             <BookFilter defaultFilter={filterBy} onSetFilter={onSetFilter} />
-            <section>
-                <Link to="/book/edit">Add Book</Link>
+            <section className="addButton">
+                <button><Link to="/book/edit">Add Book</Link></button>
             </section>
             <BookList books={books} onRemoveBook={onRemoveBook}/>
         </section>

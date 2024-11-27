@@ -1,0 +1,93 @@
+/* books.css */
+
+.book-index {
+    font-family: 'Georgia', serif;
+    background-color: #f7f0e3;
+    color: #4a3b2f;
+    padding: 20px;
+}
+
+.book-filter {
+    background-color: #e9dbc7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.book-filter h2 {
+    color: #6b4226;
+    margin-bottom: 15px;
+}
+
+.range-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.range-value {
+    font-weight: bold;
+    color: #4a3b2f;
+}
+
+.book-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.book-list li {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.book-preview {
+    margin-bottom: 20px;
+}
+
+.book-preview img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.book-preview h2 {
+    color: #6b4226;
+    margin-bottom: 10px;
+}
+
+.book-preview h3, .book-preview h4 {
+    color: #4a3b2f;
+    margin-bottom: 10px;
+}
+
+.book-list section {
+    margin-top: 15px;
+}
+
+.book-list button {
+    background-color: #6b4226;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.book-list button:hover {
+    background-color: #8a5c3d;
+}
+
+.book-list a {
+    text-decoration: none;
+    color: inherit;
+}

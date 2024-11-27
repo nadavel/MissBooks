@@ -1,0 +1,67 @@
+/* about.css */
+
+.about {
+    font-family: 'Georgia', serif;
+    background-color: #f7f0e3;
+    color: #4a3b2f;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.about-intro {
+    text-align: center;
+    padding: 40px;
+    background-color: #e9dbc7;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.about-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.our-story, .our-mission {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.story-content, .mission-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.story-image, .mission-image {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.community {
+    text-align: center;
+    padding: 40px;
+    background-color: #e9dbc7;
+    border-radius: 10px;
+}
+
+.community-image {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.our-story h2, .our-mission h2, .community h2 {
+    color: #6b4226;
+    margin-bottom: 15px;
+}
+
+.our-story p, .our-mission p, .community p {
+    color: #4a3b2f;
+}

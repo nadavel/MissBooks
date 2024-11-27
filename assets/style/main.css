@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import "./home.css";
+@import "./about.css";
+
 /* Vars */
 :root {
 	--clr1: rgb(96, 107, 91);
@@ -213,6 +215,24 @@ a.active {
 	}
 }
 
+.book-index {
+    font-family: 'Georgia', serif;
+    background-color: #f7f0e3;
+    color: #4a3b2f;
+    padding: 20px;
+}
+
+.addButton{
+	display: grid;
+	place-items: center;
+}
+
+.addButton button{
+	width: 100px;
+	background-color: #6b4226;
+    color: #ffffff;
+}
+
 .book-list{
 	list-style: none;
     padding: 15px 0 0;
@@ -226,14 +246,20 @@ a.active {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--clr1bg);
+    background-color: #ffffff;
+    border-radius: 10px;
     padding-block: 0.2em;
+	text-align: center;
+	color: #6b4226;
 }
 
 .book-filter {
-    background-color: var(--clr2bg);
-    padding: 0.3rem 1em;
     margin-block: .5em;
+	background-color: #e9dbc7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+	color: #6b4226;
     
 }
 
@@ -245,6 +271,41 @@ a.active {
 
 .book-filter form button {
     margin-inline: 0;
-	border: 1px solid #000;
-	background-color: rgb(156, 173, 173);
+}
+
+.range-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.book-preview img {
+    width: 200;
+    height: auto;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.book-list button,
+.book-filter form button{
+    background-color: #6b4226;
+    color: #ffffff;
+    border: none;
+    padding: 10px ;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.book-list button:hover,
+.addButton button:hover,
+.book-filter form button:hover {
+    background-color: #8a5c3d;
+}
+
+.book-list a {
+    text-decoration: none;
+    color: inherit;
 }

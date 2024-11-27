@@ -1,3 +1,4 @@
+const { Link } = ReactRouterDOM
 
 export function Home() {
     return (
@@ -6,7 +7,7 @@ export function Home() {
                 <img src="assets\img\miss-books-logo.png" alt="Miss Books Mascot" className="mascot-logo" />
                 <h1>Welcome to Miss Books</h1>
                 <p>Discover your next favorite read at Miss Books, where the charm of a dusty old bookstore meets the convenience of online shopping.</p>
-                <button className="explore-btn">Explore Our Collection</button>
+                <button className="explore-btn"><Link to={'/book/'}>Explore Our Collection</Link></button>
             </div>
             <div className="highlights">
                 <div className="highlight">
