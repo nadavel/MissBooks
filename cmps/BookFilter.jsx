@@ -58,7 +58,7 @@ export function BookFilter({ defaultFilter, onSetFilter }) {
             <form onSubmit={onSubmitFilter}>
                 <label htmlFor="txt">Search by title</label>
                 <input value={txt} onChange={handleChange} type="text" name="txt" id="txt" />
-                <label htmlFor="publishedDate">Search by year published year</label>
+                <label htmlFor="publishedDate">Search by year</label>
                 <div className="range-container">
                     <input value={publishedDate} onChange={handleChange} type="range" min={minYear} max={maxYear} name="publishedDate" id="publishedDate" />
                     <span className="range-value">{publishedDate}</span>

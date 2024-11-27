@@ -244,5 +244,7 @@ a.active {
 }
 
 .book-filter form button {
-    margin-inline: 0
+    margin-inline: 0;
+	border: 1px solid #000;
+	background-color: rgb(156, 173, 173);
 }
