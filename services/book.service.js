@@ -22,11 +22,11 @@ function query(filterBy = {}) {
         .then(books => {
             if (filterBy.txt) {
                 const regExp = new RegExp(filterBy.txt, 'i')
-                books = books.filter(book => regExp.test(book.vendor))
+                books = books.filter(book => regExp.test(book.title))
             }
 
-            if (filterBy.minSpeed) {
-                books = books.filter(book => book.maxSpeed >= filterBy.minSpeed)
+            if (filterBy.publishedDate) {
+                books = books.filter(book => book.publishedDate >= filterBy.publishedDate)
             }
 
             return books
@@ -53,8 +53,8 @@ function getEmptyBook(vendor = '', maxSpeed = '') {
     return { vendor, maxSpeed }
 }
 
-function getDefaultFilter(filterBy = { txt: '', minSpeed: 0 }) {
-    return { txt: filterBy.txt, minSpeed: filterBy.minSpeed }
+function getDefaultFilter(filterBy = { txt: '', publishedYear: 0 }) {
+    return { txt: filterBy.txt, publishedYear: filterBy.publishedYear }
 }
 
 function _createBooks() {
