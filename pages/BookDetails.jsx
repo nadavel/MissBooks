@@ -34,7 +34,9 @@ export function BookDetails() {
         categories,
         thumbnail,
         language,
-        listPrice
+        listPrice,
+        prevbookId,
+        nextbookId
     } = book
 
     // Compute pageBadge and dateBadge inline
@@ -56,15 +58,16 @@ export function BookDetails() {
         dateBadge = 'New'
     }
 
-    function onBack() {
-        navigate('/book')
+    function onNavigate(str='') {
+        let destination = `/book/${str}`
+        navigate(destination)
     }
 
     
 
     return (
         <section className="book-details-container">
-            <button className="navigate-btn prev-btn"><Link to={`/book/${book.prevbookId}`}>&lt;</Link></button>
+            <button className="navigate-btn prev-btn" onClick={() => onNavigate(prevbookId)}>&lt;</button>
             <div className="book-main">
                 <h1>{title}</h1>
                 <h2>{subtitle}</h2>
@@ -84,12 +87,12 @@ export function BookDetails() {
                     <h4 className={`price ${listPrice.amount > 150 ? 'price-high' : listPrice.amount < 20 ? 'price-low' : ''}`}>Price: {`${listPrice.amount} ${listPrice.currencyCode}`}</h4>
                 </div>
                 <div className="navigate-pages">
-                    <button className="navigate-btn" onClick={onBack}>Back</button>
+                    <button className="navigate-btn" onClick={() => onNavigate()}>Back</button>
                     <button className="navigate-btn"><Link to={`/book/edit/${book.id}`}>Edit</Link></button>
                 </div>
             </div>
             {/* <BookReview bookId={book.id} /> */}
-            <button className="navigate-btn next-btn"><Link to={`/book/${book.nextbookId}`}>&gt;</Link></button>
+            <button className="navigate-btn next-btn" onClick={() => onNavigate(nextbookId)}>&gt;</button>
         </section>
     )
 }
