@@ -9,9 +9,9 @@ export function BookList({books, onRemoveBook}){
                 <li key={book.id}>
                     <BookPreview book={book}/>
                     <section>
-                        <button onClick ={() => onRemoveBook(book.Id)}>Remove</button>
-                        <button><Link to={`/book/${book.Id}`}>Details</Link></button>
-                        <button><Link to={`/book/edit/${book.Id}`}>Edit</Link></button>
+                        <button onClick ={() => onRemoveBook(book.id)}>Remove</button>
+                        <button><Link to={`/book/${book.id}`}>Details</Link></button>
+                        <button><Link to={`/book/edit/${book.id}`}>Edit</Link></button>
                     </section>
 
                 </li>

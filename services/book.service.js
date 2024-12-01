@@ -35,6 +35,7 @@ function query(filterBy = {}) {
 
 function get(bookId) {
     return storageService.get(DB_KEY, bookId)
+        .then(_setNextPrevBookId)
 }
 
 function remove(bookId) {
@@ -55,6 +56,17 @@ function getEmptyBook(vendor = '', maxSpeed = '') {
 
 function getDefaultFilter(filterBy = { txt: '', publishedYear: 0 }) {
     return { txt: filterBy.txt, publishedYear: filterBy.publishedYear }
+}
+
+function _setNextPrevBookId(book){
+    return query().then((books) => {
+        const bookIdx = books.findIndex((currbook) => currbook.id === book.id)
+        const nextbook = books[bookIdx + 1] ? books[bookIdx + 1] : books[0]
+        const prevbook = books[bookIdx - 1] ? books[bookIdx - 1] : books[books.length - 1]
+        book.nextbookId = nextbook.id
+        book.prevbookId = prevbook.id
+        return book
+    })
 }
 
 function _createBooks() {
