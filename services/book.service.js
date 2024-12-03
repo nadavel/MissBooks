@@ -50,8 +50,23 @@ function save(book) {
     }
 }
 
-function getEmptyBook(vendor = '', maxSpeed = '') {
-    return { vendor, maxSpeed }
+function getEmptyBook() {
+    return {
+        title: '',
+        subtitle: '',
+        authors: [],
+        publishedDate: 0,
+        description: '',
+        pageCount: 0,
+        categories: [],
+        thumbnail: '',
+        language: '',
+        listPrice: {
+          amount: 0,
+          currencyCode: '',
+          isOnSale: false
+        } 
+    }
 }
 
 function getDefaultFilter(filterBy = { txt: '', publishedYear: 0 }) {
