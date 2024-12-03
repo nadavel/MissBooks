@@ -1,0 +1,86 @@
+/* book-details.css */
+
+.book-details-container {
+    font-family: 'Georgia', serif;
+    background-color: #f7f0e3;
+    color: #4a3b2f;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+	display: flex;
+}
+
+.book-main{
+	display: grid;
+	place-items: center;
+}
+
+.navigate-pages{
+	display: flex;
+}
+
+.navigate-btn{
+	background-color: #6b4226;
+	color: #ffffff;
+	padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.book-thumbnail {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+h1, h2, h3, h4, p {
+    color: #6b4226;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+h3, h4 {
+    margin-bottom: 10px;
+}
+
+.price-info {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.badges-container{
+	display: flex;
+}
+
+.badges-container > span{
+	display: block;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	
+}
+
+.badge {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.price-high{
+	color: #fc0000;
+}
+
+.price-low{
+	color: rgb(8, 192, 8);
+}
