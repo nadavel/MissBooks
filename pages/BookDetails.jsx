@@ -1,20 +1,21 @@
 import { bookService } from '../services/book.service.js'
+import { LongText } from '../cmps/LongText.jsx'
 const  { useEffect, useState } = React
 const { Link, useParams, useNavigate } = ReactRouterDOM
-import { BookReview } from './BookReview.jsx'
+//import { BookReview } from './BookReview.jsx'
 
 export function BookDetails() {
     const [book, setBook] = useState(null)
-    const params = useParams()
+    const {bookId} = useParams()
     const navigate = useNavigate()
 
     useEffect(() => {
         loadBook()
-    }, [params.bookId])
+    }, [bookId])
 
     async function loadBook() {
         try {
-            const fetchedBook = await bookService.get(params.bookId)
+            const fetchedBook = await bookService.get(bookId)
             setBook(fetchedBook)
         } catch (err) {
             console.error('Error in getting book', err)
@@ -78,7 +79,7 @@ export function BookDetails() {
                     {dateBadge && <span className="badge date-badge">{dateBadge}</span>}
                     {listPrice.isOnSale && <span className="badge">On Sale!</span>}
                 </div>
-                <p>Description: {description}</p>
+                <p>Description: <LongText txt={description}/></p>
                 <p>Page Count: {pageCount}</p>
                 <h4>Published Date: {publishedDate}</h4>
                 <p>Categories: {categories.join(', ')}</p>
@@ -88,7 +89,7 @@ export function BookDetails() {
                 </div>
                 <div className="navigate-pages">
                     <button className="navigate-btn" onClick={() => onNavigate()}>Back</button>
-                    <button className="navigate-btn"><Link to={`/book/edit/${book.id}`}>Edit</Link></button>
+                    <button className="navigate-btn"><Link to={`/book/edit/${bookId}`}>Edit</Link></button>
                 </div>
             </div>
             {/* <BookReview bookId={book.id} /> */}
