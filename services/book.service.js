@@ -12,6 +12,10 @@ export const bookService = {
     save,
     getEmptyBook,
     getDefaultFilter,
+    getReviews,
+    addReview,
+    getReviews,
+    getFilterFromSrcParams
 }
 
 // For Debug (easy access from console):
@@ -40,6 +44,8 @@ function get(bookId) {
 
 function remove(bookId) {
     return storageService.remove(DB_KEY, bookId)
+
+    
 }
 
 function save(book) {
@@ -69,8 +75,17 @@ function getEmptyBook() {
     }
 }
 
-function getDefaultFilter(filterBy = { txt: '', publishedYear: 0 }) {
+function getDefaultFilter(filterBy = { txt: '', publishedYear: '' }) {
     return { txt: filterBy.txt, publishedYear: filterBy.publishedYear }
+}
+
+function getFilterFromSrcParams(srcParams) {
+    const txt = srcParams.get('txt') || ''
+    const publishedYear = srcParams.get('publishedYear') || ''
+    return {
+        txt,
+        publishedYear
+    }
 }
 
 function _setNextPrevBookId(book){
@@ -95,4 +110,19 @@ function _createBook(vendor, maxSpeed = 250) {
     const book = getEmptyBook(vendor, maxSpeed)
     book.id = utilService.makeId()
     return book
+}
+
+function addReview(bookId, newReview){
+    return get(bookId)
+        .then((book) => {
+            if(!book.reviews) book.reviews = []
+            book.reviews.push(newReview)
+            return save(book)
+        })
+}
+
+function getReviews(bookId) {
+    return get(bookId).then((book) => {
+        return book.reviews || []
+    })
 }
