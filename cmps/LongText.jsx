@@ -8,16 +8,15 @@ export function LongText({txt, length=100}){
         setIsExpanded(isExpanded => !isExpanded)
     }
 
+    const isTextTooLong = txt.length > length
     if (!txt) return null;
-    const displayText = isExpanded ? txt : txt.slice(0, length)
-    console.log(displayText);
-    console.log(txt);
+    const displayText = isExpanded ? txt : txt.substring(0, length)
     
     
 
     return (
         <section className="long-text">
-            <p>{displayText}{txt.length > length && !isExpanded && '...'}</p>
+            <p>{displayText}{isTextTooLong && !isExpanded && '...'}</p>
             {txt.length > length && (
                 <button onClick={toggleExpand} className="read-more-btn">
                     {isExpanded ? 'Read Less' : 'Read More'}

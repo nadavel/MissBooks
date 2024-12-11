@@ -84,3 +84,27 @@ h3, h4 {
 .price-low{
 	color: rgb(8, 192, 8);
 }
+
+.read-more-btn{
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.75em;
+    cursor: pointer;
+}
+
+.read-more-btn:hover{
+    text-decoration: underline;
+}
+
+.review-list{
+    display: flex;
+}
+
+.review-head{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
