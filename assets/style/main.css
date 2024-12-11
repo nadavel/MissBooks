@@ -6,6 +6,7 @@
 @import "./books.css";
 @import "./book-details.css";
 @import "./book-edit.css";
+@import "./user-msg.css";
 /* Vars */
 :root {
 	--clr1: rgb(96, 107, 91);
@@ -218,5 +219,22 @@ a.active {
 	}
 }
 
+.book-review{
+	background-color: #f7f0e3;
+    color: #4a3b2f;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+	text-align: center;
+}
 
+.form-first-row{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 10px;
+}
 
+.form-second-row{
+	display: grid;
+}
