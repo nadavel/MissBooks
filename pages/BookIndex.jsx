@@ -10,15 +10,23 @@ const { Link, useSearchParams } = ReactRouterDOM
 export function BookIndex(){
     const [searchParams, setSearchParams] = useSearchParams()
     const [books, setBooks] = useState(null)
-    const [filterBy, setFilterBy] = useState(bookService.getFilterFromSrcParams(searchParams))
+    const [filterBy, setFilterBy] = useState({
+        ...bookService.getFilterFromSrcParams(searchParams),
+        listPrice: { isOnSale: false }, // Ensure default structure
+    })
 
     useEffect(() => {
-        setSearchParams(getTruthyValues(filterBy))
+        const filterParams = { ...filterBy }
+        if (filterBy.listPrice) {
+            filterParams.isOnSale = filterBy.listPrice.isOnSale
+            delete filterParams.listPrice // Remove nested object to avoid URL encoding issues
+        }
+        setSearchParams(getTruthyValues(filterParams))
         loadBooks()
     }, [filterBy])
 
     function loadBooks(){
-        
+        console.log('Filter By:', filterBy)
         bookService.query(filterBy)
             .then(books => {                
                 setBooks(books)
@@ -51,6 +59,7 @@ export function BookIndex(){
             <BookFilter defaultFilter={filterBy} onSetFilter={onSetFilter} />
             <section className="addButton">
                 <button><Link to="/book/edit">Add Book</Link></button>
+                <button><Link to="/book/add">Add Book with Google</Link></button>
             </section>
             <BookList books={books} onRemoveBook={onRemoveBook}/>
         </section>

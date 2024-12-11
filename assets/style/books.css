@@ -1,3 +1,4 @@
+@import "./book-filter.css";
 .book-index {
     font-family: 'Georgia', serif;
     background-color: #f7f0e3;
@@ -6,12 +7,11 @@
 }
 
 .addButton{
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: center;
 }
 
 .addButton button{
-	width: 100px;
 	background-color: #6b4226;
     color: #ffffff;
 }
@@ -36,32 +36,6 @@
 	color: #6b4226;
 }
 
-.book-filter {
-    margin-block: .5em;
-	background-color: #e9dbc7;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-	color: #6b4226;
-    
-}
-
-.book-filter form {
-    display: grid;
-    grid-template-columns: 100px 200px;
-    gap: .3em;
-}
-
-.book-filter form button {
-    margin-inline: 0;
-}
-
-.range-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
 
 .book-preview img {
     width: 200;

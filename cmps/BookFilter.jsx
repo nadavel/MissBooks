@@ -30,7 +30,13 @@ export function BookFilter({ defaultFilter, onSetFilter }) {
                 value = target.checked
                 break
         }
-        setFilterBy((prevFilter) => ({ ...prevFilter, [field]: value }))
+        setFilterBy((prevFilter) => {
+            const updatedFilter = { ...prevFilter, [field]: value }
+            if (field === 'isOnSale') {
+                updatedFilter.listPrice = { ...prevFilter.listPrice, isOnSale: value }
+            }
+            return updatedFilter
+        })
     }
 
     function updateYearRange(){
@@ -49,8 +55,10 @@ export function BookFilter({ defaultFilter, onSetFilter }) {
         ev.preventDefault()
         onSetFilter(filterBy)
     }
-
-    const { txt, publishedDate=minYear } = filterBy
+    console.log(filterBy);
+    
+    const { txt, publishedDate = minYear, authors, listPrice = {} } = filterBy
+    const { isOnSale = false } = listPrice
     return (
         <section className="book-filter">
             <h2>Filter books</h2>
@@ -62,6 +70,10 @@ export function BookFilter({ defaultFilter, onSetFilter }) {
                     <input value={publishedDate || ''} onChange={handleChange} type="range" min={minYear} max={maxYear} name="publishedDate" id="publishedDate" />
                     <span className="range-value">{publishedDate}</span>
                 </div>
+                <label htmlFor="authors">Search by author</label>
+                <input value={authors} onChange={handleChange} type="text" name="authors" id="authors" />
+                <label htmlFor="isOnSale">On sale</label>
+                <input checked={isOnSale} onChange={handleChange} type="checkbox" name="isOnSale" id="isOnSale" />
                 <button>Submit</button>
             </form>
         </section>
