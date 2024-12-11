@@ -50,7 +50,7 @@ export function BookFilter({ defaultFilter, onSetFilter }) {
         onSetFilter(filterBy)
     }
 
-    const { txt, publishedDate } = filterBy
+    const { txt, publishedDate=minYear } = filterBy
     return (
         <section className="book-filter">
             <h2>Filter books</h2>
@@ -59,7 +59,7 @@ export function BookFilter({ defaultFilter, onSetFilter }) {
                 <input value={txt} onChange={handleChange} type="text" name="txt" id="txt" />
                 <label htmlFor="publishedDate">Search by year</label>
                 <div className="range-container">
-                    <input value={publishedDate} onChange={handleChange} type="range" min={minYear} max={maxYear} name="publishedDate" id="publishedDate" />
+                    <input value={publishedDate || ''} onChange={handleChange} type="range" min={minYear} max={maxYear} name="publishedDate" id="publishedDate" />
                     <span className="range-value">{publishedDate}</span>
                 </div>
                 <button>Submit</button>
